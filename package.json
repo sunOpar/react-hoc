@@ -1,0 +1,23 @@
+{
+  "name": "react-hoc",
+  "version": "0.1.0",
+  "description": "react-hoc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunOpar/react-hoc.git"
+  },
+  "keywords": [
+    "react-hoc",
+    "high-order-component"
+  ],
+  "author": "sunopar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sunOpar/react-hoc/issues"
+  },
+  "homepage": "https://github.com/sunOpar/react-hoc#readme"
+}
