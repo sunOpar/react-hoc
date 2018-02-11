@@ -4,7 +4,7 @@
   "description": "react-hoc",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "tslint --fix"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,13 @@
   "bugs": {
     "url": "https://github.com/sunOpar/react-hoc/issues"
   },
-  "homepage": "https://github.com/sunOpar/react-hoc#readme"
+  "homepage": "https://github.com/sunOpar/react-hoc#readme",
+  "devDependencies": {
+    "tslint": "^5.9.1",
+    "typescript": "^2.7.1"
+  },
+  "peerDependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
 }

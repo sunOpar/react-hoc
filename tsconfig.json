@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "pretty": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react"
+  },
+  "include": ["components"],
+  "exclude": ["node_modules"]
+}
