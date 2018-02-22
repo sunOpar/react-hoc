@@ -4,7 +4,7 @@
   "description": "react-enhance-components",
   "main": "index.js",
   "scripts": {
-    "lint": "tslint --fix"
+    "lint": "tslint --fix components/**/*"
   },
   "repository": {
     "type": "git",
