@@ -23,6 +23,9 @@
   "devDependencies": {
     "@types/react": "^16.0.38",
     "@types/react-dom": "^16.0.4",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "^22.4.2",
     "tslint": "^5.9.1",
     "tslint-react": "^3.5.1",
     "typescript": "^2.7.1"
