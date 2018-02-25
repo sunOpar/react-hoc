@@ -1,7 +1,6 @@
 import React from 'react';
 interface props {
   initParam: Object;
-  params: Object;
   children: (Object) => {};
   fetch: (Object) => Promise<any>;
 }
@@ -15,7 +14,7 @@ class ListWrap extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      params: props.params,
+      params: props.initParams,
       loading: false,
     };
   }
@@ -27,7 +26,7 @@ class ListWrap extends React.Component {
   }
   changeParam = params => {
     this.setState({ loading: true });
-    const body = Object.assign({}, this.state.params, this.props.params);
+    const body = Object.assign({}, this.state.params, params);
     this.setState({ params: body });
     this.props.fetch({ body }).then(value => {
       this.setState({ ...value, loading: false });
