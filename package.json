@@ -4,7 +4,8 @@
   "description": "react-enhance-components",
   "main": "index.js",
   "scripts": {
-    "lint": "tslint --fix components/**/*"
+    "lint": "tslint --fix components/**/*",
+    "test": "jest --config"
   },
   "repository": {
     "type": "git",
@@ -21,16 +22,21 @@
   },
   "homepage": "https://github.com/sunOpar/react-enhance-components#readme",
   "devDependencies": {
+    "@types/jest": "^22.1.3",
     "@types/react": "^16.0.38",
     "@types/react-dom": "^16.0.4",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
     "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "jest": "^22.4.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "ts-jest": "^22.0.4",
     "tslint": "^5.9.1",
     "tslint-react": "^3.5.1",
     "typescript": "^2.7.1"
-  },
-  "peerDependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
   }
 }

@@ -3,7 +3,8 @@
     "target": "es6",
     "pretty": true,
     "allowSyntheticDefaultImports": true,
-    "jsx": "react"
+    "jsx": "react",
+    "module": "commonjs"
   },
   "include": ["components"],
   "exclude": ["node_modules"]
