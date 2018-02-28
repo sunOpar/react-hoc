@@ -1,12 +1,13 @@
 import React from 'react';
 interface props {
-  initParam: Object;
+  initParams: Object;
   children: (Object) => {};
   fetch: (Object) => Promise<any>;
 }
 interface state {
   params: Object;
   loading: boolean;
+  listData: Object;
 }
 class ListWrap extends React.Component {
   state: state;
@@ -16,41 +17,42 @@ class ListWrap extends React.Component {
     this.state = {
       params: props.initParams,
       loading: false,
+      listData: undefined,
     };
   }
   componentDidMount() {
     this.setState({ loading: true });
-    this.props.fetch({ body: this.props.initParam }).then(value => {
-      this.setState({ ...value, loading: false });
+    this.props.fetch({ body: this.props.initParams }).then(value => {
+      this.setState({ listData: value, loading: false });
     });
   }
-  changeParam = params => {
+  changeParams = params => {
     this.setState({ loading: true });
     const body = Object.assign({}, this.state.params, params);
     this.setState({ params: body });
     this.props.fetch({ body }).then(value => {
-      this.setState({ ...value, loading: false });
+      this.setState({ listData: value, loading: false });
     });
   };
   changePageSize = (pageNo, pageSize) => {
-    this.changeParam({
+    this.changeParams({
       pageNo,
       pageSize,
     });
   };
   changePageNo = pageNo => {
-    this.changeParam({
+    this.changeParams({
       pageNo,
     });
   };
   render() {
     const props = {
-      changeParam: this.changeParam,
+      changeParams: this.changeParams,
       changePageSize: this.changePageSize,
       changePageNo: this.changePageNo,
       ...this.state,
     };
-    return <div>{this.props.children(props)}</div>;
+    return this.props.children(props);
   }
 }
 
